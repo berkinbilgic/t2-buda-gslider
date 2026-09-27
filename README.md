@@ -2,7 +2,7 @@
 
 MATLAB code and example in vivo data for rapid high-resolution T2 mapping with blip-up/down acquisition (BUDA), gSlider-SMS and subspace reconstruction.
 
-`githun_001_lite_release.m` reconstructs the blip-up/down EPI data with a MUSSELS-type joint reconstruction that uses a B0 field map model, performs the gSlider slice reconstruction with the simulated RF slice profiles, and estimates T2 maps with dictionary matching.
+`github_001_lite_release.m` reconstructs the blip-up/down EPI data with a MUSSELS-type joint reconstruction that uses a B0 field map model, performs the gSlider slice reconstruction with the simulated RF slice profiles, and estimates T2 maps with dictionary matching.
 
 ## Data download
 
@@ -14,7 +14,7 @@ curl -LO https://github.com/berkinbilgic/t2-buda-gslider/releases/download/v1.0/
 
 ## Usage
 
-Run `githun_001_lite_release.m` from the repository folder in MATLAB.
+Run `github_001_lite_release.m` from the repository folder in MATLAB.
 
 ## Third-party code
 
