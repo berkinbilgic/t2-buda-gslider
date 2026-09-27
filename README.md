@@ -16,6 +16,12 @@ curl -LO https://github.com/berkinbilgic/t2-buda-gslider/releases/download/v1.0/
 
 Run `github_001_lite_release.m` from the repository folder in MATLAB.
 
+## Known issue: stray `tools/Wavelet.m`
+
+`tools/` contains copies of the `@Wavelet` class files next to the `tools/@Wavelet/` class folder. The stray `tools/Wavelet.m` takes precedence over the class constructor, so the gSlider reconstruction stops in `Wavelet` with `When called from outside a class constructor, the CLASS function must be called with one input`. Delete `tools/Wavelet.m` before running, so that the class in `tools/@Wavelet/` is used. With this change the script runs to completion (tested with MATLAB R2026a, about 80 minutes).
+
+The warnings that `ctranspose`, `mtimes` and `times` have the same name as MATLAB built-ins (the other copies in `tools/`), and that the folders `library` and `imagine` do not exist, are harmless.
+
 ## Third-party code
 
 `tools/` includes Michael Lustig's SparseMRI and coil compression code (Zhang et al., MRM 2013; see `tools/README`), MRI reconstruction utilities by Jonathan Polimeni (`mrir_*`), and WaveLab wavelet MEX files (copyright notices retained in the files).
